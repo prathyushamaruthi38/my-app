@@ -1,6 +1,18 @@
-node{
-      stage('SCM Checkout'){
-       git 'https://github.com/cherukurisai451/my-app.git'
+pipeline {
+    agent any
+    stages {
+        stage('Example Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Example Deploy') {
+            when {
+                branch 'feature-1'
+            }
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }
 }
-}
-
