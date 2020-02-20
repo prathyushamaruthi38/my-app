@@ -11,7 +11,7 @@ pipeline {
                 branch 'feature-1'
             }
             steps {
-                echo 'Deploying'
+                echo 'Deploy'
             }
         }
     }
